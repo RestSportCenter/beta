@@ -1,0 +1,20 @@
+div.hero {
+  position: absolute;
+  color: blue;
+  top: 5%;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+img.hero {
+  filter: sepia(60%) grayscale(50%) blur(2px);
+  width: 100%;
+  object-fit: cover;
+  height: 100vh;
+}
+img.logo {
+  max-width: 200px;
+  width: 35%;
+}
