@@ -1,25 +1,52 @@
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { Galleria } from "primereact/galleria";
 import heroStyle from "./Hero.module.css";
 import { HeroImagesProvider } from "./HeroImagesProvider.js";
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
 
 const images = new HeroImagesProvider().getImages();
-const itemTemplate = (item) => (
-  <Image layout="fill" className={heroStyle.hero} src={item.src} />
-);
-const Hero = () => (
-  <div>
-    <div className={heroStyle.hero}>
-      <img src="/logo.png" className={heroStyle.logo} />
-    </div>
-    <Galleria
-      value={images}
-      showItemNavigators={true}
-      showThumbnails={false}
-      circular={true}
-      autoPlay={true}
-      item={itemTemplate}
-    ></Galleria>
-  </div>
-);
+const Hero = () => {
+  const [opacities, setOpacities] = useState([]);
+  const [pause, setPause] = useState(false);
+  const timer = useRef();
+
+  const [sliderRef, slider] = useKeenSlider({
+    slides: images.length,
+    loop: true,
+    duration: 3000,
+    move(s) {
+      const new_opacities = s.details().positions.map((slide) => slide.portion);
+      setOpacities(new_opacities);
+    },
+  });
+  useEffect(() => {
+    timer.current = setInterval(() => {
+      if (!pause && slider) {
+        slider.next();
+      }
+    }, 5000);
+    return () => {
+      clearInterval(timer.current);
+    };
+  }, [pause, slider]);
+  return (
+    <>
+      <div className={heroStyle.hero}>
+        <img className={heroStyle.logo} src="/logo.png" />
+      </div>
+      <div ref={sliderRef} className={heroStyle.fader}>
+        {images.map((item, idx) => (
+          <div
+            key={idx}
+            className="fader__slide"
+            style={{ opacity: opacities[idx] }}
+          >
+            <img className={heroStyle.hero} src={item.src} />
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
 export default Hero;

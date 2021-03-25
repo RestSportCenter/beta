@@ -9,12 +9,30 @@ div.hero {
   justify-content: center;
 }
 img.hero {
-  filter: sepia(60%) grayscale(50%) blur(2px);
+  filter: grayscale(50%);
   width: 100%;
   object-fit: cover;
   height: 100vh;
 }
 img.logo {
   max-width: 200px;
-  width: 35%;
+  width: 40%;
+}
+.fader {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.fader__slide {
+  position: absolute;
+  top: 0;
+}
+
+.fader img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
 }
