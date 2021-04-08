@@ -1,3 +1,45 @@
 .p-menuitem {
   color: blue;
 }
+.p-menuitem-icon {
+  float: right;
+}
+
+.bar {
+  width: 100vw;
+  height: 50px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid gold;
+  padding: 0px;
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  top: 0;
+  display: table;
+  z-index: 2;
+}
+@media screen and (max-width: 600px) {
+  .notMobile {
+    display: none !important ;
+  }
+}
+@media screen and (max-width: 344px) {
+  .bar {
+    font-size: 0.8rem !important;
+  }
+}
+.bar > a {
+  padding: 5px;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  font-weight: bolder;
+  color: #2196f3;
+}
+.bar > a:hover {
+  background-color: #2196f3;
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+  border-radius: 10px;
+  box-shadow: 0 0 5px silver;
+}

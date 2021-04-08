@@ -1,0 +1,62 @@
+div.footPage {
+  position: relative;
+  background-color: #212121;
+  color: gold;
+  float: left;
+  margin-top: 5px;
+  padding-top: 4px;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+div.foot3C {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.foot3C > div {
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  min-width: 32%;
+}
+div.footR {
+  display: block;
+}
+@media screen and (max-width: 640px) {
+  .onlyDesktop {
+    display: none;
+  }
+}
+div.contact {
+  vertical-align: middle;
+  justify-content: space-evenly;
+}
+.pointer > div {
+  cursor: pointer;
+}
+.mainIcon {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+.faIcon {
+  width: 50%;
+  vertical-align: center;
+  max-width: 30px;
+  color: green;
+}
+.faWhatsapp {
+  width: 15px;
+  color: green;
+}
+div.copyright {
+  color: silver;
+  font-weight: bold;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 12px;
+}
+.contact > div > a {
+  width: 100%;
+}

@@ -1,0 +1,74 @@
+.qsHeader {
+  background-image: url("/quem-somos/headerBKG.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 90px;
+  width: 100%;
+}
+.qsHeader > span {
+  font-size: 255%;
+  color: red;
+  margin-top: 1px;
+  font-family: "Dancing Script", cursive;
+}
+.container > div > span {
+  font-size: 35px;
+  color: gold;
+  text-shadow: 1px 2px silver;
+  font-weight: bolder;
+  font-family: "Dancing Script", cursive;
+}
+.container {
+  padding-top: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container > div {
+  padding-left: 5%;
+  padding-bottom: 20px;
+  text-align: center;
+  vertical-align: top;
+  background-color: inherit;
+}
+.paragrafo {
+  text-align: justify;
+}
+.paragrafo2 {
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  .container > div {
+    width: 100%;
+    padding-right: 5%;
+  }
+}
+@media screen and (min-width: 1001px) {
+  .container > div {
+    width: 40%;
+  }
+  .paragrafo,
+  .paragrafo2 {
+    font-size: 21px;
+  }
+}
+.img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+}
+
+.img2 {
+  border-radius: 20px;
+  max-width: 300px;
+  height: 450px;
+}
+.map {
+  width: 100%;
+  max-width: 781px;
+  fill: cover;
+}
+.containerMap {
+}

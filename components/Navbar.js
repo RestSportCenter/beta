@@ -1,20 +1,30 @@
-import "primereact/resources/themes/saga-blue/theme.css";
-import "primereact/resources/primereact.css";
-import "primeflex/primeflex.css";
+import Link from "next/link";
 import navStyle from "./Navbar.module.css";
-import { Menubar } from "primereact/menubar";
 
-const NavBar = () => {
+function NavBar(props) {
   const items = [
-    { label: "Home" },
-    { label: "Serviços" },
-    { label: "Quem Somos" },
+    { label: "INÍCIO", className: "", url: "/" },
+    { label: "CONDOMÍNOS", className: "", url: "/condominios/" },
+    { label: "EMPRESAS", className: "", url: "/empresas/" },
+    { label: "QUEM SOMOS", className: navStyle.notMobile, url: "/quem-somos/" },
   ];
-  const start = (
-    <img alt="logo" src="logo.png" height="40" className="p-mr-2"></img>
-  );
 
-  return <Menubar  model={items} start={start} />;
-};
+  return (
+    <div className={navStyle.bar}>
+      <img
+        alt="logo"
+        src="/logor-min.png"
+        width="64"
+        height="48"
+        className="p-mr-2"
+      />
+      {items.map((item, i) => (
+        <Link key={i} href={item.url}>
+          <a className={item.className}>{item.label}</a>
+        </Link>
+      ))}
+    </div>
+  );
+}
 
 export default NavBar;

@@ -1,0 +1,21 @@
+.pCardBorder {
+  max-width: 250px;
+  min-height: 472px;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, red, gold);
+  padding: 3px;
+  border-radius: 7px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+.pCard {
+  background-color: ghostwhite;
+}
+
+.pImageContainer {
+  max-height: 209px;
+  overflow: hidden;
+}
