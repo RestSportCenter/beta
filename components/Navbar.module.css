@@ -8,8 +8,8 @@
 .bar {
   width: 100vw;
   height: 50px;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid gold;
+  background-color: #f8f9ca;
+  border-bottom: 1px solid #f8f1aa;
   padding: 0px;
   position: sticky;
   position: -webkit-sticky; /* Safari */

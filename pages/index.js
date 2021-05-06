@@ -3,12 +3,12 @@ import styles from "../styles/Home.module.css";
 import Layout from "../components/layout.js";
 import Hero from "../components/Hero.js";
 import CardEmpresas from "../components/cardEmpresas.js";
-import Parceiros from "../components/parceiros.js";
+import Clientes from "../components/parceiros.js";
 import { Button } from "primereact/button";
 
 const Home = () => {
   const hero = (
-    <Hero heroImg="/hero/2r-min.jpg">
+    <Hero heroImg="/hero/hero.jpg">
       <h4>
         Refeições Coletivas <br /> Refeições Transportadas
       </h4>
@@ -74,10 +74,10 @@ const Home = () => {
       </div>
       <div className={`${styles.container}`}>
         <div>
-          <span>Parceiro Oficial</span>
+          <span>Principais Clientes</span>
         </div>
       </div>
-      <Parceiros />
+      <Clientes />
     </Layout>
   );
 };

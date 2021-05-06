@@ -1,16 +1,21 @@
 import styles from "./parceiros.module.css";
 
-function Parceiros() {
+function Clientes() {
   return (
     <div className={styles.parceiros}>
       <img
         src="/leroy-merlin-logo-2.png"
-        width="250px"
-        height="188.09px"
-        alt="Logo da Parceira Leroy Merlin"
-        className={styles.parceiroImg}
+        width="175px"
+        height="131.66px"
+        alt="Logo do Cliente Leroy Merlin"
+      />
+      <img
+        src="/gmc-logo.png"
+        width="202.16px"
+        height="60px"
+        alt="Logo da cliente GM&C"
       />
     </div>
   );
 }
-export default Parceiros;
+export default Clientes;

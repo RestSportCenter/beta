@@ -51,7 +51,7 @@ div.hero {
   border: 0;
 }
 .heroFade {
-  filter: grayscale(30%) blur(3px);
+  filter: brightness(90%) blur(2px);
   object-fit: cover;
   width: 100%;
   height: 100vh;

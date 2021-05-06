@@ -18,45 +18,69 @@ const Footpage = () => {
       <div className={styles.contact}>
         <div className={styles.footR}>
           <div className={` ${styles.foot3C} ${styles.pointer}`}>
-            <Link href={googleMapsLink}>
-              <div>
-                <FontAwesomeIcon
-                  className={styles.faIcon}
-                  icon={faMapMarkerAlt}
-                />
-                <br />
+            <div className={styles.footR}>
+              <Link href={googleMapsLink}>
+                <div>
+                  <FontAwesomeIcon
+                    className={styles.faIcon}
+                    icon={faMapMarkerAlt}
+                  />
+                  <br />
+                </div>
+              </Link>
+              <div className={styles.onlyDesktop}>
+                <div>
+                  <span>
+                    Unidade SJCampos: Rua Antares, 165. Jardim Satélite.
+                  </span>
+                  <br />
+                  <span>
+                    Unidade Taubaté: Av. Manoel José de Siqueira Mattos, 54.
+                    R.S. Santo Antônio.
+                  </span>
+                </div>
               </div>
-            </Link>
+            </div>
 
-            <Link href={whatsappLink}>
-              <div>
-                <FontAwesomeIcon className={styles.faIcon} icon={faWhatsapp} />
+            <div className={styles.footR}>
+              <Link href={whatsappLink}>
+                <div>
+                  <FontAwesomeIcon
+                    className={styles.faIcon}
+                    icon={faWhatsapp}
+                  />
+                </div>
+              </Link>
+              <div className={styles.onlyDesktop}>
+                (11) 96191-3001
+                <br />
+                (12) 3931-0754 (ramal 9)
               </div>
-            </Link>
-            <Link href="mailto:contato@restaurantesportcenter.com.br">
-              <div>
-                <FontAwesomeIcon
-                  className={styles.faIcon}
-                  icon={faEnvelopeOpen}
-                />
+            </div>
+            <div className={styles.footR}>
+              <Link href="mailto:contato@restaurantesportcenter.com.br">
+                <div>
+                  <FontAwesomeIcon
+                    className={styles.faIcon}
+                    icon={faEnvelopeOpen}
+                  />
+                </div>
+              </Link>
+              <div className={styles.onlyDesktop}>
+                contato@restaurantesportcenter.com.br
               </div>
-            </Link>
+            </div>
           </div>
         </div>
         <div className={styles.footR}>
           <div className={styles.foot3C}>
-            <div>
-              <span> Matriz: Rua XXXX, Taubaté</span>
+            <div className={styles.onlyMobile}>
+              <span>Unidade SJCampos: Rua Antares, 165. Jardim Satélite.</span>
               <br />
-              <span>Filial: Avenida Andrômeda, 33, SJC</span>
-            </div>
-            <div className={styles.onlyDesktop}>
-              (12) 9999-9999
-              <br />
-              (12) 3939-9999
-            </div>
-            <div className={styles.onlyDesktop}>
-              contato@restaurantesportcenter.com.br
+              <span>
+                Unidade Taubaté: Av. Manoel José de Siqueira Mattos, 54. R.S.
+                Santo Antônio.
+              </span>
             </div>
           </div>
         </div>

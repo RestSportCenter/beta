@@ -15,9 +15,6 @@ const QuemSomos = () => {
             cliente com profissionalismo e pontualidade. Todos os nossos
             colaboradores, cozinheiros e nutricionistas são treinados
             especificamente para atender com qualidade as exigências do cliente.
-            <br />
-            Cada cliente é único. Seja sua empresa pequena ou grande, a Sport
-            Center está preparada para lhe atender.
           </p>
           <br />
         </div>
@@ -32,10 +29,12 @@ const QuemSomos = () => {
         <div>
           <span>Público-alvo</span>
           <p className={styles.paragrafo}>
-            Servimos mais de 500 refeições diariamente e formamos boas relações
-            em nosso caminho. Estamos prontos para atender os mais variados
-            tipos de cliente, tais como Construção Civil, atacadistas, comércio,
-            indústria e prestadores de serviço.
+            Cada cliente é único. Seja sua empresa de pequeno ou grande porte, a
+            Sport Center está preparada para lhe atender. Servimos mais de 500
+            refeições diariamente e formamos boas relações em nosso caminho.
+            Estamos prontos para atender os mais variados tipos de cliente, tais
+            como Construção Civil, atacadistas, comércio, indústria e
+            prestadores de serviço.
           </p>
         </div>
         <div>

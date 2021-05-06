@@ -22,9 +22,15 @@ div.foot3C {
 }
 div.footR {
   display: block;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 640px) {
   .onlyDesktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 641px) {
+  .onlyMobile {
     display: none;
   }
 }
