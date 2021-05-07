@@ -52,9 +52,13 @@ const Footpage = () => {
                 </div>
               </Link>
               <div className={styles.onlyDesktop}>
+                Shunji Abe <br />
                 (11) 96191-3001
                 <br />
-                (12) 3931-0754 (ramal 9)
+                <br />
+                Simone Silva
+                <br />
+                (12) 98809-4181
               </div>
             </div>
             <div className={styles.footR}>
