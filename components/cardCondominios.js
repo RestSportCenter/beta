@@ -4,8 +4,8 @@ export default function CardCondominios() {
   return (
     <>
       <CardHolder
-        src="/cards/card1.jpeg"
-        alt="Exemplo de Cozinha Industrial Montada em São José dos Campos"
+        src="/cards/card5.jpeg"
+        alt="Exemplo de serviço de lanchonetes para condomínio montado em São José dos Campos"
         width="314px"
         height="235.5px"
         title="SERVIÇO COMPLETO"
@@ -17,10 +17,10 @@ export default function CardCondominios() {
         Com confiança não se brinca.
       </CardHolder>
       <CardHolder
-        src="/cards/card2.jpg"
+        src="/cards/card6.jpeg"
         alt="Van para entrega de comidas coletivas em São José dos Campos"
         width="314px"
-        height="209.34px"
+        height="418.67px"
         title="Segurança e Conforto"
         subTitle="Bem-Estar sem Riscos"
       >
@@ -44,6 +44,7 @@ export default function CardCondominios() {
         src="/cards/card4.jpg"
         title="COFFEE-BREAK"
         subTitle="Café Matinal ou Lanchinho Noturno"
+        alt="Café matinal em nosso restaurante de condomínio"
         width="314px"
         height="209.33"
       >

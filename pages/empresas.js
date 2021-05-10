@@ -29,10 +29,12 @@ export default function Empresas() {
         <img
           src="empresas/estrutura-completa.jpeg"
           className={styles.imgMobil}
+          alt="Funcionárias trabalhando em nossa unidade de cozinha industrial de Taubaté"
         />
         <img
           src="empresas/estrutura-completa-wide.jpeg"
           className={styles.imgWide}
+          alt="Nossa unidade de Cozinha industrial em Taubaté"
         />
         <p>
           O Restaurante Sport Center oferece opções de serviço completo para

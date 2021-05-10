@@ -43,6 +43,7 @@ export default function CardEmpresas() {
         src="/cards/card4.jpg"
         title="COFFEE-BREAK"
         subTitle="Café Matinal e Lanche da Tarde"
+        alt="Café colonial empreendido em Taubaté."
         width="314px"
         height="209.33"
       >

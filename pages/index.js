@@ -5,6 +5,7 @@ import Hero from "../components/Hero.js";
 import CardEmpresas from "../components/cardEmpresas.js";
 import Clientes from "../components/parceiros.js";
 import { Button } from "primereact/button";
+import Seo from "../components/Seo";
 
 const Home = () => {
   const hero = (
@@ -29,56 +30,72 @@ const Home = () => {
     </Hero>
   );
   return (
-    <Layout hero={hero} pageName="Início">
-      <div className={styles.container}>
-        <div>
-          <img
-            className={styles.img}
-            width="520px"
-            height="520px"
-            src="/quem-somos/imagem-about-min.jpg"
-          />
-        </div>
-        <div>
-          <span>Quem Somos</span>
-          <p className={styles.paragrafo}>
-            Desde 2017 o Restaurante Sport Center atende às necessidades de cada
-            cliente com profissionalismo e pontualidade. Todos os nossos
-            colaboradores, cozinheiros e nutricionistas são treinados
-            especificamente para atender com qualidade as exigências do cliente.
+    <>
+      <Seo
+        title="Início"
+        description="Serviço de Cozinha Industrial completa no Vale do Paraíba e Região, São Paulo."
+        canonical=""
+        images={[
+          {
+            url: "/hero/hero.jpg",
+            width: 1280,
+            height: 720,
+            alt: "Umas praças de alimentação do Restaurante Sport Center",
+          },
+        ]}
+      />
+      <Layout hero={hero} pageName="Início">
+        <div className={styles.container}>
+          <div>
+            <img
+              className={styles.img}
+              width="520px"
+              height="520px"
+              src="/quem-somos/imagem-about-min.jpg"
+            />
+          </div>
+          <div>
+            <span>Quem Somos</span>
+            <p className={styles.paragrafo}>
+              Desde 2017 o Restaurante Sport Center atende às necessidades de
+              cada cliente com profissionalismo e pontualidade. Todos os nossos
+              colaboradores, cozinheiros e nutricionistas são treinados
+              especificamente para atender com qualidade as exigências do
+              cliente.
+              <br />
+              Cada cliente é único.
+            </p>
             <br />
-            Cada cliente é único.
-          </p>
+            <Link href="/quem-somos">
+              <Button label="Saiba Mais" className="p-button-primary" />
+            </Link>
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div>
+            <span>Nossos Serviços</span>
+          </div>
+        </div>
+        <div className={styles.container}>
+          <CardEmpresas />
+        </div>
+        <div className={`${styles.container} ${styles.center}`}>
+          <span className={styles.destaque}>
+            Atendemos a Todo o Vale do Paraíba e Região
+          </span>
           <br />
-          <Link href="/quem-somos">
-            <Button label="Saiba Mais" className="p-button-primary" />
-          </Link>
+          <span className={styles.destaque}>
+            Unidades em São José dos Campos e Taubaté
+          </span>
         </div>
-      </div>
-      <div className={styles.container}>
-        <div>
-          <span>Nossos Serviços</span>
+        <div className={`${styles.container}`}>
+          <div>
+            <span>Principais Clientes</span>
+          </div>
         </div>
-      </div>
-      <div className={styles.container}>
-        <CardEmpresas />
-      </div>
-      <div className={`${styles.container} ${styles.center}`}>
-        <span className={styles.destaque}>
-          Atendemos a Todo o Vale do Paraíba e Região
-        </span>
-        <br />
-        <span className={styles.destaque}>
-          Unidades em São José dos Campos e Taubaté
-        </span>
-      </div>
-      <div className={`${styles.container}`}>
-        <div>
-          <span>Principais Clientes</span>
-        </div>
-      </div>
-      <Clientes />
-    </Layout>
+        <Clientes />
+      </Layout>
+    </>
   );
 };
 export default Home;

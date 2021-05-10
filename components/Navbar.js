@@ -12,7 +12,7 @@ function NavBar(props) {
   return (
     <div className={navStyle.bar}>
       <img
-        alt="logo"
+        alt="Logo da Sport Center"
         src="/logor-min.png"
         width="64"
         height="48"

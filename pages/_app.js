@@ -1,7 +1,9 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import SeoPadrao from "../components/DefaultSeo";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  <SeoPadrao />;
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
