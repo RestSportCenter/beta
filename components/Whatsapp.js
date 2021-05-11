@@ -1,4 +1,5 @@
 import whatsappStyle from "./Whatsapp.module.css";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
@@ -8,12 +9,14 @@ export const whatsappLink =
 const Whatsapp = () => {
   return (
     <>
-      <a className={whatsappStyle.mainIcon} href={whatsappLink} target="_blank">
-        <FontAwesomeIcon
-          className={whatsappStyle.faWhatsapp}
-          icon={faWhatsapp}
-        />
-      </a>
+      <Link href={whatsappLink} target="_blank">
+        <div className={whatsappStyle.mainIcon}>
+          <FontAwesomeIcon
+            className={whatsappStyle.faWhatsapp}
+            icon={faWhatsapp}
+          />
+        </div>
+      </Link>
     </>
   );
 };

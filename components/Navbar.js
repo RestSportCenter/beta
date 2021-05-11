@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import navStyle from "./Navbar.module.css";
 
 function NavBar(props) {
@@ -11,7 +12,8 @@ function NavBar(props) {
 
   return (
     <div className={navStyle.bar}>
-      <img
+      <Image
+        priority
         alt="Logo da Sport Center"
         src="/logor-min.png"
         width="64"

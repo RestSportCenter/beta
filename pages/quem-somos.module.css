@@ -65,10 +65,7 @@
   max-width: 300px;
   height: 450px;
 }
-.map {
+.containerMap {
   width: 100%;
   max-width: 781px;
-  fill: cover;
-}
-.containerMap {
 }

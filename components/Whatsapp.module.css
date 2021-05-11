@@ -19,7 +19,7 @@
     transform: scale(1);
   }
 }
-a.mainIcon {
+.mainIcon {
   z-index: 2;
   position: fixed;
   top: 90%;
@@ -29,20 +29,20 @@ a.mainIcon {
   animation: intro 0.8s ease-in-out 3s 2;
 }
 @media screen and (min-width: 1024px) {
-  a.mainIcon {
+  .mainIcon {
     left: 93%;
     width: 4%;
   }
 }
 
 @media screen and (min-width: 1024px) and (min-height: 1300px) {
-  a.mainIcon {
+  .mainIcon {
     left: 86%;
     width: 10%;
   }
 }
 @media screen and (min-width: 764px) and (max-width: 1023px) {
-  a.mainIcon {
+  .mainIcon {
     left: 88%;
     width: 10%;
   }

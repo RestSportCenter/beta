@@ -1,4 +1,5 @@
 import Layout from "../components/layout.js";
+import Image from "next/image";
 import Hero from "../components/Hero.js";
 import styles from "./empresas.module.css";
 import CardEmpresas from "../components/cardEmpresas.js";
@@ -26,16 +27,23 @@ export default function Empresas() {
     <Layout hero={hero} title="Empresas">
       <div className={styles.emHeader}>Serviços Empresariais</div>
       <div className={styles.containerStory}>
-        <img
-          src="empresas/estrutura-completa.jpeg"
-          className={styles.imgMobil}
-          alt="Funcionárias trabalhando em nossa unidade de cozinha industrial de Taubaté"
-        />
-        <img
-          src="empresas/estrutura-completa-wide.jpeg"
-          className={styles.imgWide}
-          alt="Nossa unidade de Cozinha industrial em Taubaté"
-        />
+        <div className={styles.imgMobil}>
+          <Image
+            width={204}
+            height={420}
+            layout="fixed"
+            src="/empresas/estrutura-completa.jpeg"
+            alt="Funcionárias trabalhando em nossa unidade de cozinha industrial de Taubaté"
+          />
+        </div>
+        <div className={styles.imgWide}>
+          <Image
+            width={640}
+            height={480}
+            src="/empresas/estrutura-completa-wide.jpeg"
+            alt="Nossa unidade de Cozinha industrial em Taubaté"
+          />
+        </div>
         <p>
           O Restaurante Sport Center oferece opções de serviço completo para
           empresas de pequeno, médio e grande porte. Nossos nutricionistas,

@@ -1,9 +1,10 @@
+import Image from "next/image";
 import styles from "./cardHolder.module.css";
 import { Card } from "primereact/card";
 
 function CardHolder(props) {
   const cardHeader = (
-    <img
+    <Image
       alt={props.alt}
       src={props.src}
       width={props.width}

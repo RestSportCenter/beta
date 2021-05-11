@@ -1,11 +1,11 @@
 import styles from "./quem-somos.module.css";
+import Image from "next/image";
 import Layout from "../components/layout.js";
 import Seo from "../components/Seo";
-import dynamic from "next/dynamic";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 var Carousel = require("react-responsive-carousel").Carousel;
 
-const QuemSomos = () => {
+export default function QuemSomos() {
   var CarouselFiles = [
     "1.jpeg",
     "2.jpeg",
@@ -74,7 +74,9 @@ const QuemSomos = () => {
             <br />
           </div>
           <div>
-            <img
+            <Image
+              width={520}
+              height={390}
               src="/quem-somos/cozinha-01.jpg"
               alt="Vista de uma gôndola preparada na praça de alimentação de uma das unidades do restaurante Sport Center"
               className={styles.img}
@@ -82,11 +84,12 @@ const QuemSomos = () => {
           </div>
         </div>
         <div className={styles.container}>
-          <div>
-            <img
+          <div className={styles.img2}>
+            <Image
+              width={280}
+              height={576}
               src="/quem-somos/quem-somos1.jpeg"
               alt="Colaboradora preparando a refeição em nossa Cozinha Industrial"
-              className={styles.img2}
             />
           </div>
           <div>
@@ -129,15 +132,14 @@ const QuemSomos = () => {
           </div>
         </div>
         <div className={` ${styles.container} ${styles.containerMap}`}>
-          <img
+          <Image
+            layout="fill"
+            objectFit="contain"
             src="/quem-somos/onde-estamos.jpg"
             alt="Mapa apontando os locais de nossas unidades em São José dos Campos e Taubaté"
-            className={styles.map}
           />
         </div>
       </Layout>
     </>
   );
-};
-
-export default QuemSomos;
+}

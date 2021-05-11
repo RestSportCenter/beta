@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Layout from "../components/layout.js";
 import Hero from "../components/Hero.js";
@@ -47,10 +48,11 @@ const Home = () => {
       <Layout hero={hero} pageName="Início">
         <div className={styles.container}>
           <div>
-            <img
+            <Image
               className={styles.img}
               width="520px"
               height="520px"
+              alt="Colagem de três fotos das colaboradoras preparando refeição no Restaurante Sport Center"
               src="/quem-somos/imagem-about-min.jpg"
             />
           </div>

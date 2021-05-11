@@ -1,3 +1,4 @@
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import heroStyle from "./Hero.module.css";
 const Button = dynamic(() => {
@@ -11,7 +12,16 @@ const Hero = (props) => {
   return (
     <>
       <div className={heroStyle.hero}>
-        <img className={heroStyle.logo} src="/logor-min.png" />
+        <div className={heroStyle.logo}>
+          <Image
+            layout="responsive"
+            width={200}
+            height={150}
+            src="/logor-min.png"
+            alt="Logotipo do Restaurante Sport Center"
+          />
+        </div>
+
         <h1>
           Restaurante
           <br /> Sport Center
@@ -19,7 +29,11 @@ const Hero = (props) => {
         {props.children}
       </div>
       <div id="fader" className={heroStyle.fader}>
-        <img className={heroStyle.heroFade} src={props.heroImg} />
+        <Image
+          layout="fill"
+          className={heroStyle.heroFade}
+          src={props.heroImg}
+        />
       </div>
       <div className={heroStyle.saibaMais}>
         <Button
