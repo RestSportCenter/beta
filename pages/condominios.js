@@ -22,8 +22,23 @@ export default function Empresas() {
       </div>
     </Hero>
   );
+
+  const seoImages = [
+    {
+      url: "/condominios/hero.webp",
+      width: 1280,
+      height: 720,
+      alt: "Restaurante em Condomínio de São José dos Campos",
+    },
+  ];
   return (
-    <Layout hero={hero} title="Empresas">
+    <Layout
+      hero={hero}
+      pageName="Condomínios"
+      description="Serviço de Restaurante para Condomínios completo no Vale do Paraíba e Região, São Paulo."
+      canonical=""
+      images={seoImages}
+    >
       <div className={styles.emHeader}>Facilidade e Praticidade</div>
       <div className={styles.containerStory}>
         <img src="condominios/apre1.jpeg" className={styles.imgMobil} />

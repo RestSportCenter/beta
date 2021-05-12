@@ -23,8 +23,22 @@ export default function Empresas() {
       </div>
     </Hero>
   );
+  const seoImages = [
+    {
+      url: "/empresas/cozinha-industrial.webp",
+      width: 1280,
+      height: 720,
+      alt: "Serviço de Cozinha Industrial Completa do Restaurante",
+    },
+  ];
   return (
-    <Layout hero={hero} title="Empresas">
+    <Layout
+      hero={hero}
+      pageName="Empresas"
+      description="Serviço de Cozinha Industrial Completa para Empresas"
+      canonical="empresas/"
+      images={seoImages}
+    >
       <div className={styles.emHeader}>Serviços Empresariais</div>
       <div className={styles.containerStory}>
         <div className={styles.imgMobil}>

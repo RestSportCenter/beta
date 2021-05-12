@@ -30,22 +30,23 @@ const Home = () => {
       </div>
     </Hero>
   );
+  const seoImages = [
+    {
+      url: "/hero/hero.jpg",
+      width: 1280,
+      height: 720,
+      alt: "Uma das praças de alimentação da Sport Center",
+    },
+  ];
   return (
     <>
-      <Seo
-        title="Início"
+      <Layout
+        hero={hero}
+        pageName="Início"
         description="Serviço de Cozinha Industrial completa no Vale do Paraíba e Região, São Paulo."
         canonical=""
-        images={[
-          {
-            url: "/hero/hero.jpg",
-            width: 1280,
-            height: 720,
-            alt: "Uma das praças de alimentação da Sport Center",
-          },
-        ]}
-      />
-      <Layout hero={hero} pageName="Início">
+        images={seoImages}
+      >
         <div className={styles.container}>
           <div>
             <Image

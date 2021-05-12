@@ -4,10 +4,17 @@ const Head = dynamic(() => import("next/head"));
 const NavBar = dynamic(() => import("./Navbar.js"));
 const Whatsapp = dynamic(() => import("./Whatsapp.js"));
 const Footpage = dynamic(() => import("./Footpage.js"));
+import Seo from "../components/Seo";
 
 const Layout = (props) => {
   return (
     <>
+      <Seo
+        title={` Restaurante Sport Center | ${props.pageName}`}
+        description={props.description}
+        canonical=""
+        images={props.images}
+      />
       <Head key="roboto">
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link

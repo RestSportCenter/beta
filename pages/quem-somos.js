@@ -1,7 +1,6 @@
 import styles from "./quem-somos.module.css";
 import Image from "next/image";
 import Layout from "../components/layout.js";
-import Seo from "../components/Seo";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 var Carousel = require("react-responsive-carousel").Carousel;
 
@@ -41,23 +40,23 @@ export default function QuemSomos() {
   const CarouselImages = CarouselFiles.map((f) => {
     return { src: "galeria/" + f.nome, width: f.width, height: f.height };
   });
+  const seoImages = [
+    {
+      url: "/quem-somos/cozinha-01.jpg",
+      width: 420,
+      height: 315,
+      alt:
+        "Vista de uma gôndola preparada na praça de alimentação de uma das unidades do restaurante Sport Center",
+    },
+  ];
   return (
     <>
-      <Seo
-        title="Quem Somos - Restaurante Sport Center"
-        description="A história e consolidação do Restaurante Sport Center"
+      <Layout
+        pageName="Quem Somos"
+        description="Conheça o Restaurante Sport Center"
         canonical="quem-somos/"
-        images={[
-          {
-            url: "/quem-somos/cozinha-01.jpg",
-            width: 420,
-            height: 315,
-            alt:
-              "Vista de uma gôndola preparada na praça de alimentação de uma das unidades do restaurante Sport Center",
-          },
-        ]}
-      />
-      <Layout pageName="Quem Somos">
+        images={seoImages}
+      >
         <div className={styles.qsHeader}>
           <span>Quem Somos</span>
         </div>
