@@ -5,7 +5,7 @@ import CardCondominios from "../components/cardCondominios.js";
 
 export default function Empresas() {
   const hero = (
-    <Hero heroImg="/condominios/hero.jpeg">
+    <Hero heroImg="/condominios/hero.webp">
       <div>
         <div
           className={styles.chips}

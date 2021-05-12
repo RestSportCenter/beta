@@ -33,6 +33,7 @@ const Hero = (props) => {
           layout="fill"
           className={heroStyle.heroFade}
           src={props.heroImg}
+          priority={true}
         />
       </div>
       <div className={heroStyle.saibaMais}>

@@ -10,7 +10,7 @@ import Seo from "../components/Seo";
 
 const Home = () => {
   const hero = (
-    <Hero heroImg="/hero/hero.jpg">
+    <Hero heroImg="/hero/hero.webp">
       <h4>
         Refeições Coletivas <br /> Refeições Transportadas
       </h4>

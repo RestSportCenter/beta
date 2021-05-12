@@ -6,7 +6,7 @@ import CardEmpresas from "../components/cardEmpresas.js";
 
 export default function Empresas() {
   const hero = (
-    <Hero heroImg="/empresas/cozinha-industrial.jpeg">
+    <Hero heroImg="/empresas/cozinha-industrial.webp">
       <div>
         <div
           className={styles.chips}
