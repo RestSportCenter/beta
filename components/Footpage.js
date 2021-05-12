@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Footpage.module.css";
 import { whatsappLink } from "./Whatsapp.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,11 +10,11 @@ import {
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const Footpage = () => {
-  const googleMapsLink = "https://maps.google.com/";
+  const googleMapsLink = "https://goo.gl/maps/Jk9SZWhj6C8wzUKx7";
   return (
     <div className={styles.footPage}>
       <div className={styles.mainIcon}>
-        <img src="/footLogor-min.png" height="118px" width="280px" />
+        <Image src="/footLogor-min.png" height={118} width={280} />
       </div>
       <div className={styles.contact}>
         <div className={styles.footR}>
