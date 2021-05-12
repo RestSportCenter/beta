@@ -1,6 +1,7 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import heroStyle from "./Hero.module.css";
+import Head from "next/head";
 const Button = dynamic(() => {
   import("primeicons/primeicons.css");
   import("primereact/resources/themes/saga-blue/theme.css");
@@ -11,6 +12,9 @@ const Button = dynamic(() => {
 const Hero = (props) => {
   return (
     <>
+      <Head>
+        <link rel="preload" as="image" href={props.heroImg} />
+      </Head>
       <div className={heroStyle.hero}>
         <div className={heroStyle.logo}>
           <Image

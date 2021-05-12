@@ -7,39 +7,39 @@ var Carousel = require("react-responsive-carousel").Carousel;
 
 export default function QuemSomos() {
   var CarouselFiles = [
-    "1.jpeg",
-    "2.jpeg",
-    "3.jpeg",
-    "4.jpeg",
-    "5.jpeg",
-    "6.jpeg",
-    "7.jpeg",
-    "8.jpeg",
-    "9.jpeg",
-    "10.jpeg",
-    "11.jpeg",
-    "12.jpeg",
-    "13.jpeg",
-    "14.jpeg",
-    "15.jpeg",
-    "16.jpeg",
-    "17.jpeg",
-    "18.jpeg",
-    "19.jpeg",
-    "20.jpeg",
-    "21.jpeg",
-    "22.jpeg",
-    "23.jpeg",
-    "24.jpeg",
-    "25.jpeg",
-    "26.jpeg",
-    "27.jpeg",
-    "28.jpeg",
-    "29.jpeg",
-    "30.jpeg",
+    { nome: "1.webp", width: 1280, height: 720 },
+    { nome: "2.webp", width: 1008, height: 756 },
+    { nome: "3.webp", width: 1008, height: 756 },
+    { nome: "4.webp", width: 1008, height: 756 },
+    { nome: "5.webp", width: 378, height: 504 },
+    { nome: "6.webp", width: 756, height: 1008 },
+    { nome: "7.webp", width: 756, height: 1008 },
+    { nome: "8.webp", width: 720, height: 1280 },
+    { nome: "9.webp", width: 756, height: 1008 },
+    { nome: "10.webp", width: 1008, height: 756 },
+    { nome: "11.webp", width: 1280, height: 960 },
+    { nome: "12.webp", width: 1280, height: 960 },
+    { nome: "13.webp", width: 1280, height: 960 },
+    { nome: "14.webp", width: 1280, height: 960 },
+    { nome: "15.webp", width: 960, height: 1280 },
+    { nome: "16.webp", width: 1280, height: 720 },
+    { nome: "17.webp", width: 1280, height: 720 },
+    { nome: "18.webp", width: 1008, height: 756 },
+    { nome: "19.webp", width: 560, height: 1152 },
+    { nome: "20.webp", width: 560, height: 1152 },
+    { nome: "21.webp", width: 560, height: 1152 },
+    { nome: "22.webp", width: 560, height: 1152 },
+    { nome: "23.webp", width: 560, height: 1152 },
+    { nome: "24.webp", width: 560, height: 1152 },
+    { nome: "25.webp", width: 560, height: 1152 },
+    { nome: "26.webp", width: 1280, height: 720 },
+    { nome: "27.webp", width: 560, height: 1152 },
+    { nome: "28.webp", width: 648, height: 1152 },
+    { nome: "29.webp", width: 1152, height: 560 },
+    { nome: "30.webp", width: 560, height: 1152 },
   ];
   const CarouselImages = CarouselFiles.map((f) => {
-    return { src: "galeria/" + f, legend: f };
+    return { src: "galeria/" + f.nome, width: f.width, height: f.height };
   });
   return (
     <>
@@ -87,9 +87,12 @@ export default function QuemSomos() {
           <div className={styles.img2}>
             <Image
               width={280}
-              height={576}
+              height={456}
+              layout="responsive"
+              objectFit="cover"
               src="/quem-somos/quem-somos1.jpeg"
               alt="Colaboradora preparando a refeição em nossa Cozinha Industrial"
+              className={styles.img}
             />
           </div>
           <div>
@@ -111,10 +114,15 @@ export default function QuemSomos() {
               dynamicHeight={true}
               showIndicators={false}
             >
-              {CarouselImages.map((f) => {
+              {CarouselImages.map((f, i) => {
                 return (
-                  <div>
-                    <img src={f.src} width="520px" />
+                  <div key={i}>
+                    <Image
+                      src={f.src}
+                      width="520px"
+                      height={(520 / f.width) * f.height}
+                      layout="intrinsic"
+                    />
                   </div>
                 );
               })}
@@ -131,13 +139,17 @@ export default function QuemSomos() {
             </p>
           </div>
         </div>
-        <div className={` ${styles.container} ${styles.containerMap}`}>
-          <Image
-            layout="fill"
-            objectFit="contain"
-            src="/quem-somos/onde-estamos.jpg"
-            alt="Mapa apontando os locais de nossas unidades em São José dos Campos e Taubaté"
-          />
+        <div className={styles.containerMap}>
+          <div>
+            <Image
+              layout="intrinsic"
+              width={781}
+              height={440}
+              objectFit="contain"
+              src="/quem-somos/onde-estamos.jpg"
+              alt="Mapa apontando os locais de nossas unidades em São José dos Campos e Taubaté"
+            />
+          </div>
         </div>
       </Layout>
     </>

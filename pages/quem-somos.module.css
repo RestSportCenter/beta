@@ -68,4 +68,5 @@
 .containerMap {
   width: 100%;
   max-width: 781px;
+  margin: auto;
 }
