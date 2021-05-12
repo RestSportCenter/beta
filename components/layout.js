@@ -9,7 +9,7 @@ const Layout = (props) => {
   return (
     <>
       <Head key="roboto">
-        <link href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Titillium+Web:wght@200&display=swap"
           rel="stylesheet"

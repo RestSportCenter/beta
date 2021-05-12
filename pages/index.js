@@ -41,7 +41,7 @@ const Home = () => {
             url: "/hero/hero.jpg",
             width: 1280,
             height: 720,
-            alt: "Umas praças de alimentação do Restaurante Sport Center",
+            alt: "Uma das praças de alimentação da Sport Center",
           },
         ]}
       />
