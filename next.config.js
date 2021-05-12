@@ -1,7 +1,8 @@
 module.exports = {
+  basePath: "/beta",
   images: {
     loader: "imgix",
-    path: "",
+    path: "/beta/",
   },
   assetPrefix: "",
 };
